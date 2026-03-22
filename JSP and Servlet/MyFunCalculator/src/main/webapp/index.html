@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyFunCalculator</title>
+
+    <!-- Connecting CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="card">
+
+            <h1>🎉 Fun Calculator</h1>
+            <p class="tagline">Calculate numbers with a smile 😄</p>
+
+            <!-- FORM START -->
+            <form action="myServlet" method="get">
+
+                <div class="input-group">
+                    <input name="number1" type="number" placeholder="Enter First Number" required>
+                    <input name="number2" type="number" placeholder="Enter Second Number" required>
+                </div>
+
+                <!-- IMPORTANT CHANGE:
+                     Use SAME name for buttons so servlet knows
+                     which operation user clicked -->
+                <div class="buttons">
+                    <button type="submit" name="operation" value="add">+</button>
+                    <button type="submit" name="operation" value="sub">-</button>
+                    <button type="submit" name="operation" value="mul">*</button>
+                    <button type="submit" name="operation" value="div">/</button>
+                </div>
+
+            </form>
+            <!-- FORM END -->
+
+            <div class="result">
+                Result: <span>0</span>
+            </div>
+
+
+        </div>
+
+    </div>
+
+</body>
+</html>
